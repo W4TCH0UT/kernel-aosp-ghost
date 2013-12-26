@@ -6,8 +6,16 @@
 
 wm97xx-ts-y := wm97xx-core.o
 
+<<<<<<< HEAD
 obj-$(CONFIG_TOUCHSCREEN_CYTTSP3)       += cyttsp3_core.o
 obj-$(CONFIG_TOUCHSCREEN_CYTTSP3)       += cyttsp3_i2c.o
+=======
+# for sweep2wake, leave 1st to avoid merge issues at the end of the file
+obj-$(CONFIG_TOUCHSCREEN_SWEEP2WAKE)                += sweep2wake.o
+# for doubletap2wake, leave 1st to avoid merge issues at the end of the file
+obj-$(CONFIG_TOUCHSCREEN_DOUBLETAP2WAKE)        += doubletap2wake.o
+
+>>>>>>> eae3a3b... initial s2w dt2w code import from @showp1984
 obj-$(CONFIG_TOUCHSCREEN_SY3200)	+= sy3200.o
 obj-$(CONFIG_TOUCHSCREEN_SY3400)	+= sy3400.o
 obj-$(CONFIG_TOUCHSCREEN_88PM860X)	+= 88pm860x-ts.o
